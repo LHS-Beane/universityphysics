@@ -9,19 +9,16 @@ theme:
     accent: purple
   features:
     - navigation.tabs
-    - search.suggest
 
+# --- EXTENSIONS ---
 markdown_extensions:
   - admonition
   - pymdownx.highlight
   - pymdownx.superfences
-  # This extension finds the math symbols ($$)
-  - pymdownx.arithmatex:
-      generic: true
+  # NOTICE: We removed "pymdownx.arithmatex"
+  # This forces MkDocs to leave your $$ symbols as raw text.
 
+# --- MATH ENGINE ---
 extra_javascript:
-  # This loads the config file we just made
-  - javascripts/mathjax.js
-  # This loads the actual Math engine from the web
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  # We use MathJax 2.7 because it auto-detects $$ without needing config files
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML
