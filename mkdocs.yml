@@ -1,10 +1,14 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/mkdocs.yml b/mkdocs.yml
+index 49314bd705d7c45ddbac10baa0e20e28259c6440..1ee1f6f5d03891bb16d5d0eb48b1816ff5c1f5d5 100644
+--- a/mkdocs.yml
++++ b/mkdocs.yml
+@@ -1,24 +1,31 @@
  site_name: Physics 201
  site_url: https://lhs-beane.github.io/universityphysics/
  
  theme:
    name: material
--  palette: 
--    scheme: slate 
 +  palette:
 +    scheme: slate
      primary: teal
@@ -20,6 +24,7 @@
 +
  markdown_extensions:
    - admonition
++  - pymdownx.details
    - pymdownx.highlight
    - pymdownx.superfences
    # We use the default setting (generic: false).
@@ -30,4 +35,7 @@
  extra_javascript:
    # Load MathJax 2.7. It automatically finds the tags created above.
    - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML
+ 
+EOF
+)
 
