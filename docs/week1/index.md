@@ -17,13 +17,11 @@ Use integrals to compute velocity and position
 
 Solve constant and non-constant acceleration problems
 
-Model free fall using calculus
+Model free-fall motion using calculus
 
 Understand the foundation of Test 1
 
-------------------------------------------------------------------------------------
 📘 1. Units, Dimensions, and Dimensional Analysis
-------------------------------------------------------------------------------------
 1.1 SI Base Units
 Quantity	Unit	Symbol
 Length	meter	m
@@ -31,7 +29,7 @@ Mass	kilogram	kg
 Time	second	s
 Temperature	kelvin	K
 Electric current	ampere	A
-Derived Units
+1.2 Derived Units
 
 Examples:
 
@@ -43,13 +41,14 @@ Force: Newton (N = kg·m/s²)
 
 Energy: Joule (J = N·m = kg·m²/s²)
 
-1.2 Dimensions
+1.3 Dimensions
 
 Dimensions describe the type of physical quantity.
 
-Example:
+Examples:
 
-Velocity: 
+Velocity
+:
 [
 𝐿
 ]
@@ -58,11 +57,11 @@ Velocity:
 −
 1
 ]
-[L][T
+Velocity:[L][T
 −1
 ]
-
-Force: 
+Force
+:
 [
 𝑀
 ]
@@ -74,21 +73,21 @@ Force:
 −
 2
 ]
-[M][L][T
+Force:[M][L][T
 −2
 ]
-
 Why it matters
 
 Dimensional analysis can:
 
 Check if an equation is valid
 
-Help derive physical relationships
+Help derive relationships
 
 Example – Dimensional Check
 
-Is 
+Is the equation
+
 𝑣
 =
 3
@@ -96,18 +95,24 @@ Is
 +
 7
 𝑥
-v=3t+7x physically valid?
+v=3t+7x
 
-Left: 
+valid?
+
+Left side:
+
+[
 𝑣
-v is 
+]
+=
 [
 𝐿
 /
 𝑇
 ]
-[L/T]
-Right terms:
+[v]=[L/T]
+
+Right side:
 
 3
 𝑡
@@ -125,18 +130,17 @@ Right terms:
 ]
 7x→[L]
 
-These cannot be added → INVALID
+These units cannot be added.
+➡️ Invalid equation
 
-1.3 Unit Conversions
+1.4 Unit Conversions
 
 Use the factor-label method.
 
-Example
-
-Convert 60 mph to m/s:
-
+Example: Convert 60 mph to m/s
 60
- mi/hr
+mi
+hr
 ⋅
 1609
  m
@@ -147,7 +151,15 @@ Convert 60 mph to m/s:
  hr
 3600
  s
-60 mi/hr⋅
+=
+26.8
+ m/s
+60
+hr
+mi
+	​
+
+⋅
 1 mi
 1609 m
 	​
@@ -157,12 +169,8 @@ Convert 60 mph to m/s:
 1 hr
 	​
 
-
-= 26.8 m/s
-
-------------------------------------------------------------------------------------
+=26.8 m/s
 📘 2. Position, Velocity, and Acceleration
-------------------------------------------------------------------------------------
 
 Before calculus, students memorize:
 
@@ -190,18 +198,20 @@ dv
 	​
 
 
-But in this course, you learn why these definitions exist.
+In this course, you learn why these definitions matter.
 
 2.1 Position Function
 
-Position 
+Position:
+
 𝑥
 (
 𝑡
 )
-x(t) tells you where an object is at any time.
+x(t)
 
-Example function:
+Example:
+
 𝑥
 (
 𝑡
@@ -218,11 +228,11 @@ x(t)=t
 3
 −4t+2
 
-Its graph would curve (since it’s cubic).
+A cubic function curves up and down depending on time.
 
 2.2 Velocity
 
-Velocity is the rate of change of position:
+Velocity is the derivative of position:
 
 𝑣
 (
@@ -239,7 +249,7 @@ dx
 	​
 
 
-Using the example above:
+Using the example:
 
 𝑣
 (
@@ -254,25 +264,23 @@ Using the example above:
 v(t)=3t
 2
 −4
-Graph Interpretation
 
-Where 
+Interpretation:
+
 𝑣
 >
 0
-v>0, motion is forward
+v>0 → moving forward
 
-Where 
 𝑣
 <
 0
-v<0, motion is backward
+v<0 → moving backward
 
-Where 
 𝑣
 =
 0
-v=0, turning points occur
+v=0 → turning point
 
 2.3 Acceleration
 
@@ -306,13 +314,11 @@ a(t)=6t
 
 Meaning:
 
-Positive values → speeding up
+Positive → speeding up
 
-Negative values → slowing down
+Negative → slowing down
 
-------------------------------------------------------------------------------------
 📘 3. Derivatives in Kinematics
-------------------------------------------------------------------------------------
 
 Students must learn:
 
@@ -325,6 +331,11 @@ Students must learn:
 𝑥
 𝑑
 𝑡
+v(t)=
+dt
+dx
+	​
+
 𝑎
 (
 𝑡
@@ -334,17 +345,12 @@ Students must learn:
 𝑣
 𝑑
 𝑡
-v(t)=
-dt
-dx
-	​
-
 a(t)=
 dt
 dv
 	​
 
-Example 1 – Derivative Practice
+Example 1 — Derivative Practice
 
 Let:
 
@@ -393,11 +399,9 @@ Linear velocity
 
 Quadratic position
 
-------------------------------------------------------------------------------------
 📘 4. Integration in Kinematics
-------------------------------------------------------------------------------------
 
-If given acceleration:
+If acceleration is known:
 
 𝑣
 (
@@ -414,7 +418,7 @@ If given acceleration:
 𝑡
 v(t)=∫a(t)dt
 
-If given velocity:
+If velocity is known:
 
 𝑥
 (
@@ -432,7 +436,7 @@ If given velocity:
 x(t)=∫v(t)dt
 4.1 Constant Acceleration
 
-If 
+When 
 𝑎
 a is constant:
 
@@ -484,10 +488,9 @@ t+
 at
 2
 
-These are the standard kinematic equations.
+These are the standard kinematics equations.
 
-4.2 Non-Constant Acceleration
-Example
+4.2 Non-Constant Acceleration Example
 𝑎
 (
 𝑡
@@ -524,7 +527,7 @@ Use initial conditions to find
 𝐶
 C.
 
-4.3 Free Fall
+4.3 Free-Fall Motion
 
 Take downward as positive:
 
@@ -591,7 +594,7 @@ t+
 gt
 2
 
-If dropped (released from rest):
+If dropped:
 
 𝑣
 0
@@ -611,28 +614,36 @@ x
 
  = starting height
 
-------------------------------------------------------------------------------------
 📘 5. Graph Interpretation (Critical for Test 1)
-------------------------------------------------------------------------------------
+Position → Velocity
 
-Students must interpret position/velocity/acceleration graphs.
+Velocity is the slope of the position graph.
 
-5.1 Position → Velocity
+Velocity → Acceleration
 
-Velocity is the slope of a position graph.
+Acceleration is the slope of the velocity graph.
 
-5.2 Velocity → Acceleration
+Velocity → Displacement
 
-Acceleration is the slope of a velocity graph.
+Displacement equals the area under the velocity curve.
 
-5.3 Velocity → Displacement
-
-Area under the velocity curve = displacement.
-
-------------------------------------------------------------------------------------
 📘 6. Worked Examples
-------------------------------------------------------------------------------------
-Example 1 — From Position to Velocity & Acceleration
+Example 1 — From 
+𝑥
+(
+𝑡
+)
+x(t) to 
+𝑣
+(
+𝑡
+)
+v(t) and 
+𝑎
+(
+𝑡
+)
+a(t)
 𝑥
 (
 𝑡
@@ -647,9 +658,6 @@ Example 1 — From Position to Velocity & Acceleration
 x(t)=4t
 3
 −2t
-
-Find velocity and acceleration.
-
 𝑣
 (
 𝑡
@@ -675,18 +683,9 @@ Example 2 — Dropped Object
 
 A ball is dropped from rest at a height of 20 m.
 
-Find:
-
-Velocity after 2 seconds
-
-Position after 2 seconds
-
-Solution:
+Velocity after 2 seconds:
 
 𝑣
-(
-𝑡
-)
 =
 𝑔
 𝑡
@@ -698,11 +697,11 @@ Solution:
 =
 19.6
  m/s
-v(t)=gt=9.8(2)=19.6 m/s
+v=gt=9.8(2)=19.6 m/s
+
+Position after 2 seconds:
+
 𝑥
-(
-𝑡
-)
 =
 20
 −
@@ -715,18 +714,6 @@ v(t)=gt=9.8(2)=19.6 m/s
 2
 2
 )
-x(t)=20−
-2
-1
-	​
-
-(9.8)(2
-2
-)
-𝑥
-(
-𝑡
-)
 =
 20
 −
@@ -734,8 +721,15 @@ x(t)=20−
 =
 0.4
  m
-x(t)=20−19.6=0.4 m
-Example 3 — Integrating Non-Constant Acceleration
+x=20−
+2
+1
+	​
+
+(9.8)(2
+2
+)=20−19.6=0.4 m
+Example 3 — Non-Constant Acceleration
 𝑎
 (
 𝑡
@@ -743,16 +737,14 @@ Example 3 — Integrating Non-Constant Acceleration
 =
 6
 𝑡
-a(t)=6t
+,
 𝑣
 (
 0
 )
 =
 3
-v(0)=3
-
-Find velocity and position.
+a(t)=6t,v(0)=3
 
 Velocity:
 
@@ -772,16 +764,8 @@ Velocity:
 𝑡
 2
 +
-𝐶
-=
-3
-𝑡
-2
-+
 3
 v(t)=∫6tdt=3t
-2
-+C=3t
 2
 +3
 
@@ -800,55 +784,24 @@ Position:
 +
 3
 )
+ 
 𝑑
+𝑡
+=
+𝑡
+3
++
+3
 𝑡
 x(t)=∫(3t
 2
-+3)dt
-𝑥
-(
-𝑡
-)
-=
-𝑡
++3)dt=t
 3
-+
-3
-𝑡
-+
-𝐶
-2
-x(t)=t
-3
-+3t+C
-2
-	​
++3t
+📘 7. Practice Problems
 
+Given
 
-If 
-𝑥
-(
-0
-)
-=
-0
-x(0)=0, then 
-𝐶
-2
-=
-0
-C
-2
-	​
-
-=0.
-
-------------------------------------------------------------------------------------
-📘 7. Practice Problems (Students Should Try These)
-------------------------------------------------------------------------------------
-1.
-
-Given 
 𝑥
 (
 𝑡
@@ -867,37 +820,29 @@ x(t)=2t
 3
 −5t
 2
-+7, find:
++7
 
+find 
 𝑣
 (
 𝑡
 )
-v(t)
-
+v(t) and 
 𝑎
 (
 𝑡
 )
-a(t)
-
-2.
+a(t).
 
 A car starts from rest and accelerates at 4 m/s² for 5 seconds.
 Find the distance traveled.
 
-3.
-
 A ball is thrown upward at 12 m/s.
-Find the max height.
-
-4.
+Find the maximum height.
 
 Convert 45 mph to m/s.
 
-5.
-
-Velocity is 
+If 
 𝑣
 (
 𝑡
@@ -905,7 +850,7 @@ Velocity is
 =
 6
 𝑡
-v(t)=6t. If 
+v(t)=6t and 
 𝑥
 (
 0
@@ -919,22 +864,18 @@ x(0)=0, find
 )
 x(t).
 
-------------------------------------------------------------------------------------
-📘 8. Mini Quiz (Auto-Check Friendly)
-------------------------------------------------------------------------------------
-1. If velocity is the derivative of position, what is acceleration?
+📘 8. Mini-Quiz (Self-Check)
 
+If velocity is the derivative of position, what is acceleration?
 ✔ Derivative of velocity
 
-2. True or False: acceleration can change even if velocity is zero.
+True or False: acceleration can change even when velocity is zero.
+✔ True
 
-✔ True (turning point)
-
-3. A ball dropped has initial velocity:
-
+A ball dropped has initial velocity:
 ✔ 0 m/s
 
-4. If 
+If 
 𝑎
 (
 𝑡
@@ -947,13 +888,10 @@ a(t)=10, what kind of function is
 𝑡
 )
 v(t)?
-
 ✔ Linear
 
-------------------------------------------------------------------------------------
 📘 9. Summary Sheet (What You Must Know for Test 1)
-------------------------------------------------------------------------------------
-Formulas to know:
+Must-Know Formulas:
 𝑣
 (
 𝑡
@@ -1029,16 +967,16 @@ t+
 
 at
 2
-Concepts to know:
+Must-Know Concepts:
 
-Slope interpretation
+Slope interpretation (graphs)
 
-Area under curve interpretation
+Area under velocity curve
 
-Free fall modeling
+Free-fall modeling
 
 Unit conversions
 
 Dimensional analysis
 
-This closes Week 1.
+🎉 Week 1 Complete!
