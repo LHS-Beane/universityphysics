@@ -14,14 +14,11 @@ markdown_extensions:
   - admonition
   - pymdownx.highlight
   - pymdownx.superfences
-  # We activate Arithmatex to protect the math
+  # We use the default setting (generic: false).
+  # This creates <script type="math/tex"> tags that MathJax 2 loves.
   - pymdownx.arithmatex:
-      # We do NOT use 'generic: true'. 
-      # This defaults to the "MathJax Legacy" format 
-      # which works without any helper files.
       generic: false
 
 extra_javascript:
-  # We load the older MathJax 2.7 which automatically finds 
-  # the protected math blocks created by Arithmatex.
+  # Load MathJax 2.7. It automatically finds the tags created above.
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML
