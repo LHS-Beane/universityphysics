@@ -5,12 +5,6 @@ site_url: https://lhs-beane.github.io/universityphysics/
 theme:
   name: material
 
-# This section tells the site to look for $$ signs
+# We are REMOVING the math extensions here to let the script in index.md handle it.
 markdown_extensions:
-  - pymdownx.arithmatex:
-      generic: true
-
-# This section loads the math engine from the web
-extra_javascript:
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - admonition
