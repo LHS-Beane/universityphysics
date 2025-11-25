@@ -3,17 +3,11 @@ site_url: https://your-username.github.io/universityphysics/
 
 theme:
   name: material
-  palette: 
-    scheme: slate 
-    primary: teal
-    accent: purple
 
-# We are turning OFF the complex math extension
 markdown_extensions:
   - admonition
-  - pymdownx.highlight
-  - pymdownx.superfences
 
-# We are loading MathJax 2 (older but auto-scans for $$ symbols)
+# We are using the Cloud version of MathJax. 
+# This does NOT require any local javascript files.
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML
