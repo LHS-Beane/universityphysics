@@ -1,41 +1,47 @@
- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
-diff --git a/mkdocs.yml b/mkdocs.yml
-index 49314bd705d7c45ddbac10baa0e20e28259c6440..1ee1f6f5d03891bb16d5d0eb48b1816ff5c1f5d5 100644
---- a/mkdocs.yml
-+++ b/mkdocs.yml
-@@ -1,24 +1,31 @@
- site_name: Physics 201
- site_url: https://lhs-beane.github.io/universityphysics/
- 
- theme:
-   name: material
-+  palette:
-+    scheme: slate
-     primary: teal
-     accent: purple
-   features:
-     - navigation.tabs
- 
-+nav:
-+  - Home: index.md
-+  - Syllabus: syllabus.md
-+  - Weekly Modules: modules.md
-+  - Resources: resources.md
-+
- markdown_extensions:
-   - admonition
-+  - pymdownx.details
-   - pymdownx.highlight
-   - pymdownx.superfences
-   # We use the default setting (generic: false).
-   # This creates <script type="math/tex"> tags that MathJax 2 loves.
-   - pymdownx.arithmatex:
-       generic: false
- 
- extra_javascript:
-   # Load MathJax 2.7. It automatically finds the tags created above.
-   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML
- 
-EOF
-)
+site_name: College Physics with Calculus
+site_description: Complete interactive learning environment for Phys 201.
+site_author: Andrew Beane
+repo_url: https://lhs-beane.github.io/universityphysics/
+
+theme:
+  name: material
+  features:
+    - navigation.sidebar
+    - navigation.sections
+    - navigation.instant
+    - content.code.annotate
+    - content.tabs.link
+    - content.tooltips
+    - content.footnotes
+  palette:
+    primary: indigo
+    accent: deep purple
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - footnotes
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - Home: index.md
+  - Syllabus: syllabus.md
+  - Modules:
+      - Week 1: week1/index.md
+      - Week 2: week2/index.md
+      - Week 3: week3/index.md
+      - Week 4: week4/index.md
+      - Week 5: week5/index.md
+      - Week 6: week6/index.md
+      - Week 7: week7/index.md
+      - Week 8: week8/index.md
 
