@@ -1,38 +1,26 @@
 site_name: College Physics with Calculus
-site_description: Complete interactive learning environment for Phys 201.
-site_author: Andrew Beane
-repo_url: https://lhs-beane.github.io/universityphysics/
 
 theme:
   name: material
-  features:
-    - navigation.sidebar
-    - navigation.sections
-    - navigation.instant
-    - content.code.annotate
-    - content.tabs.link
-    - content.tooltips
-    - content.footnotes
-  palette:
-    primary: indigo
-    accent: deep purple
 
 markdown_extensions:
-  - attr_list
   - admonition
+  - attr_list
+  - footnotes
   - toc:
       permalink: true
+
   - pymdownx.arithmatex:
       generic: true
+
+  - pymdownx.highlight
   - pymdownx.superfences
   - pymdownx.details
-  - pymdownx.highlight
   - pymdownx.tabbed:
       alternate_style: true
 
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-
 
 nav:
   - Home: index.md
