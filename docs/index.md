@@ -1,27 +1,13 @@
-site_name: Physics 201
-site_url: https://lhs-beane.github.io/universityphysics/
+# Welcome to Physics 201
 
-theme:
-  name: material
-  palette: 
-    scheme: slate 
-    primary: teal
-    accent: purple
-  features:
-    - navigation.tabs
-    - search.suggest
+## Course Overview
+This is the interactive hub for **Physics with Calculus**. Here you will find lecture notes, interactive simulations, and practice problems.
 
-markdown_extensions:
-  - admonition
-  - pymdownx.highlight
-  - pymdownx.superfences
-  # This extension finds the math symbols ($$)
-  - pymdownx.arithmatex:
-      generic: true
+## Mathematics Test
+Does this equation render correctly?
 
-extra_javascript:
-  # This loads the config file we just made
-  - javascripts/mathjax.js
-  # This loads the actual Math engine from the web
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+$$
+\oint \vec{E} \cdot d\vec{A} = \frac{Q_{enc}}{\epsilon_0}
+$$
+
+If you see a nice Greek integral above, the system is working!
