@@ -1,3 +1,4 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
 diff --git a/docs/modules.md b/docs/modules.md
 new file mode 100644
 index 0000000000000000000000000000000000000000..080c1a6c35b38a35244bd233ae6a6f86aa5887e8
@@ -93,3 +94,6 @@ index 0000000000000000000000000000000000000000..080c1a6c35b38a35244bd233ae6a6f86
 +    - Rework one representative problem from each week without notes.
 +    - Summarize common solution patterns (free-body diagrams, energy flow charts, and symmetry arguments).
 +    - Create a one-page formula sheet focused on relationships you routinely use.
+ 
+EOF
+)
