@@ -1,28 +1,19 @@
-# --- SITE IDENTITY ---
-site_name: Physics 201  # <--- This fixes the name at the top!
+site_name: Physics 201
 site_url: https://your-username.github.io/universityphysics/
 
-# --- THEME SETUP ---
 theme:
   name: material
   palette: 
     scheme: slate 
     primary: teal
     accent: purple
-  features:
-    - navigation.tabs
-    - search.suggest
 
-# --- MATH EXTENSIONS ---
+# We are turning OFF the complex math extension
 markdown_extensions:
-  - pymdownx.arithmatex:
-      generic: true
+  - admonition
   - pymdownx.highlight
   - pymdownx.superfences
-  - admonition
 
-# --- JAVASCRIPT LOADERS ---
+# We are loading MathJax 2 (older but auto-scans for $$ symbols)
 extra_javascript:
-  - javascripts/mathjax.js  # <--- The bridge script we just made
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML
