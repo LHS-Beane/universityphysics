@@ -10,15 +10,18 @@ theme:
   features:
     - navigation.tabs
 
-# --- EXTENSIONS ---
 markdown_extensions:
   - admonition
   - pymdownx.highlight
   - pymdownx.superfences
-  # NOTICE: We removed "pymdownx.arithmatex"
-  # This forces MkDocs to leave your $$ symbols as raw text.
+  # We activate Arithmatex to protect the math
+  - pymdownx.arithmatex:
+      # We do NOT use 'generic: true'. 
+      # This defaults to the "MathJax Legacy" format 
+      # which works without any helper files.
+      generic: false
 
-# --- MATH ENGINE ---
 extra_javascript:
-  # We use MathJax 2.7 because it auto-detects $$ without needing config files
+  # We load the older MathJax 2.7 which automatically finds 
+  # the protected math blocks created by Arithmatex.
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML
