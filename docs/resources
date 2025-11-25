@@ -1,0 +1,46 @@
+diff --git a/docs/resources.md b/docs/resources.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..4fff4a2a43cb1c6ca838fd0187dbffb89bf4ee22
+--- /dev/null
++++ b/docs/resources.md
+@@ -0,0 +1,40 @@
++# Resources
++
++A curated list of study tools, simulations, and templates to support you throughout the semester.
++
++## Formula and concept sheets
++
++- **Vectors and kinematics:** Common derivatives, component relationships, and unit checks.
++- **Dynamics:** Table of contact forces, free-body diagram templates, and common friction coefficients.
++- **Energy and momentum:** Work–energy theorem, conservation summaries, and impulse–momentum relationships.
++- **Rotation and oscillations:** Torque–angular acceleration links, parallel-axis theorem, and SHM solutions.
++- **Thermal physics:** Ideal gas law, specific heat values, and $p$–$V$ process sketches.
++
++Downloadable PDF templates can be generated from these checklists or recreated in your own notebook.
++
++## Interactive simulations
++
++- [PhET Physics simulations](https://phet.colorado.edu/en/simulations/filter?subjects=physics&type=html,prototype): Explore forces, energy skate parks, and wave interference.
++- [MyPhysicsLab](https://www.myphysicslab.com/): View numerical solutions and animations for oscillators and collisions.
++- [Falstad Ripple Tank](https://www.falstad.com/ripple/): Visualize wave superposition and boundary effects.
++
++Use these tools to test predictions before lab or to visualize “what-if” scenarios when solving homework problems.
++
++## Study strategies
++
++??? tip "Spacing and interleaving"
++    Alternate topics (e.g., dynamics problems and energy problems) within a study session. Revisit the same idea 2–3 days later with a fresh problem to reinforce long-term recall.
++
++??? example "Units-first problem solving"
++    Start each solution by listing knowns with units and the target quantity. Keep units in every algebraic step to catch mistakes before plugging numbers.
++
++??? question "How should I summarize a lab?"
++    - State the question and the physical model you used.
++    - Present a figure with labeled axes and include uncertainty bars where appropriate.
++    - Discuss whether data align with the model and how measurement limits might explain discrepancies.
++
++## Support channels
++
++- **Office hours:** Two sessions weekly plus by appointment during exam weeks.
++- **Discussion forum:** Post conceptual questions and solution sketches; mark solved posts for future reference.
++- **Tutoring center:** Free peer tutoring for mechanics and calculus topics; schedule via the university portal.
