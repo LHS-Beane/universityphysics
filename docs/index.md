@@ -1,24 +1,27 @@
-# Welcome to Physics 201
+site_name: Physics 201
+site_url: https://lhs-beane.github.io/universityphysics/
 
-## Mathematics Test
-Let's test the rendering again.
+theme:
+  name: material
+  palette: 
+    scheme: slate 
+    primary: teal
+    accent: purple
+  features:
+    - navigation.tabs
+    - search.suggest
 
-$$
-\oint \vec{E} \cdot d\vec{A} = \frac{Q_{enc}}{\epsilon_0}
-$$
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
+  # This extension finds the math symbols ($$)
+  - pymdownx.arithmatex:
+      generic: true
 
-If this works, you will see the integral symbol.
-
----
-
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script>
-  window.MathJax = {
-    tex: {
-      inlineMath: [['$','$'], ['\\(','\\)']],
-      displayMath: [['$$','$$'], ['\\[','\\]']],
-      processEscapes: true
-    }
-  };
-</script>
+extra_javascript:
+  # This loads the config file we just made
+  - javascripts/mathjax.js
+  # This loads the actual Math engine from the web
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
