@@ -1,982 +1,433 @@
-📘 WEEK 1 — Units, Dimensions, & 1D Kinematics (with Calculus)
+# 📘 WEEK 1 — Units, Dimensions, & 1D Kinematics (with Calculus)
 
-Sessions: Oct 21 & 23
-Module Type: Full lesson for students who missed class
+**Sessions:** Oct 21 & 23  
+**Module Type:** Full lesson for students who missed class
 
-🎯 Learning Goals
+---
+
+# 🎯 Learning Goals
 
 By the end of Week 1, you will be able to:
 
-Convert and analyze physical quantities using dimensional analysis
+- Convert and analyze physical quantities using dimensional analysis
+- Interpret position, velocity, and acceleration graphs & functions
+- Use derivatives to compute velocity and acceleration
+- Use integrals to compute velocity and position
+- Solve constant and non-constant acceleration problems
+- Model free fall using calculus
+- Understand the foundation of Test 1
 
-Interpret position, velocity, and acceleration graphs & functions
+---
 
-Use derivatives to compute velocity and acceleration
+# 📘 1. Units, Dimensions, and Dimensional Analysis
 
-Use integrals to compute velocity and position
+## 1.1 SI Base Units
 
-Solve constant and non-constant acceleration problems
+| Quantity | Unit | Symbol |
+|---------|------|--------|
+| Length | meter | m |
+| Mass | kilogram | kg |
+| Time | second | s |
+| Temperature | kelvin | K |
+| Electric current | ampere | A |
 
-Model free-fall motion using calculus
+---
 
-Understand the foundation of Test 1
-
-📘 1. Units, Dimensions, and Dimensional Analysis
-1.1 SI Base Units
-Quantity	Unit	Symbol
-Length	meter	m
-Mass	kilogram	kg
-Time	second	s
-Temperature	kelvin	K
-Electric current	ampere	A
-1.2 Derived Units
-
-Examples:
-
-Velocity: m/s
-
-Acceleration: m/s²
-
-Force: Newton (N = kg·m/s²)
-
-Energy: Joule (J = N·m = kg·m²/s²)
-
-1.3 Dimensions
-
-Dimensions describe the type of physical quantity.
+## 1.2 Derived Units
 
 Examples:
 
-Velocity
-:
-[
-𝐿
-]
-[
-𝑇
-−
-1
-]
-Velocity:[L][T
-−1
-]
-Force
-:
-[
-𝑀
-]
-[
-𝐿
-]
-[
-𝑇
-−
-2
-]
-Force:[M][L][T
-−2
-]
-Why it matters
+- Velocity: m/s  
+- Acceleration: m/s²  
+- Force: Newton (N = kg·m/s²)  
+- Energy: Joule (J = N·m = kg·m²/s²)
+
+---
+
+## 1.3 Dimensions
+
+Dimensions describe the *type* of physical quantity.
+
+Examples:
+
+\[
+\text{Velocity}: [L][T^{-1}]
+\]
+
+\[
+\text{Force}: [M][L][T^{-2}]
+\]
+
+### Why it matters
 
 Dimensional analysis can:
 
-Check if an equation is valid
+- Check if an equation is valid  
+- Help derive relationships  
 
-Help derive relationships
-
-Example – Dimensional Check
+### Example – Dimensional Check
 
 Is the equation
 
-𝑣
-=
-3
-𝑡
-+
-7
-𝑥
-v=3t+7x
+\[
+v = 3t + 7x
+\]
 
 valid?
 
 Left side:
 
-[
-𝑣
-]
-=
-[
-𝐿
-/
-𝑇
-]
-[v]=[L/T]
+\[
+[v] = [L/T]
+\]
 
 Right side:
 
-3
-𝑡
-→
-[
-𝑇
-]
-3t→[T]
+- \(3t \rightarrow [T]\)  
+- \(7x \rightarrow [L]\)
 
-7
-𝑥
-→
-[
-𝐿
-]
-7x→[L]
+These units cannot be added.  
+➡️ **Invalid equation**
 
-These units cannot be added.
-➡️ Invalid equation
+---
 
-1.4 Unit Conversions
+## 1.4 Unit Conversions
 
 Use the factor-label method.
 
-Example: Convert 60 mph to m/s
-60
-mi
-hr
-⋅
-1609
- m
-1
- mi
-⋅
-1
- hr
-3600
- s
+### Example: Convert 60 mph to m/s
+
+\[
+60 \frac{\text{mi}}{\text{hr}}
+\cdot
+\frac{1609\ \text{m}}{1\ \text{mi}}
+\cdot
+\frac{1\ \text{hr}}{3600\ \text{s}}
 =
-26.8
- m/s
-60
-hr
-mi
-	​
+26.8\ \text{m/s}
+\]
 
-⋅
-1 mi
-1609 m
-	​
+---
 
-⋅
-3600 s
-1 hr
-	​
-
-=26.8 m/s
-📘 2. Position, Velocity, and Acceleration
+# 📘 2. Position, Velocity, and Acceleration
 
 Before calculus, students memorize:
 
-𝑣
-=
-𝑑
-𝑥
-𝑑
-𝑡
-,
-𝑎
-=
-𝑑
-𝑣
-𝑑
-𝑡
-v=
-dt
-dx
-	​
+\[
+v = \frac{dx}{dt}, \qquad a = \frac{dv}{dt}
+\]
 
-,a=
-dt
-dv
-	​
+In this course, you learn **why** these definitions matter.
 
+---
 
-In this course, you learn why these definitions matter.
-
-2.1 Position Function
+## 2.1 Position Function
 
 Position:
 
-𝑥
-(
-𝑡
-)
+\[
 x(t)
+\]
 
 Example:
 
-𝑥
-(
-𝑡
-)
-=
-𝑡
-3
-−
-4
-𝑡
-+
-2
-x(t)=t
-3
-−4t+2
+\[
+x(t) = t^3 - 4t + 2
+\]
 
 A cubic function curves up and down depending on time.
 
-2.2 Velocity
+---
+
+## 2.2 Velocity
 
 Velocity is the derivative of position:
 
-𝑣
-(
-𝑡
-)
-=
-𝑑
-𝑥
-𝑑
-𝑡
-v(t)=
-dt
-dx
-	​
-
+\[
+v(t) = \frac{dx}{dt}
+\]
 
 Using the example:
 
-𝑣
-(
-𝑡
-)
-=
-3
-𝑡
-2
-−
-4
-v(t)=3t
-2
-−4
+\[
+v(t) = 3t^2 - 4
+\]
 
 Interpretation:
 
-𝑣
->
-0
-v>0 → moving forward
+- \(v > 0\) → moving forward  
+- \(v < 0\) → moving backward  
+- \(v = 0\) → turning point  
 
-𝑣
-<
-0
-v<0 → moving backward
+---
 
-𝑣
-=
-0
-v=0 → turning point
-
-2.3 Acceleration
+## 2.3 Acceleration
 
 Acceleration is the derivative of velocity:
 
-𝑎
-(
-𝑡
-)
-=
-𝑑
-𝑣
-𝑑
-𝑡
-a(t)=
-dt
-dv
-	​
-
+\[
+a(t) = \frac{dv}{dt}
+\]
 
 Example:
 
-𝑎
-(
-𝑡
-)
-=
-6
-𝑡
-a(t)=6t
+\[
+a(t) = 6t
+\]
 
 Meaning:
 
-Positive → speeding up
+- Positive → speeding up  
+- Negative → slowing down  
 
-Negative → slowing down
+---
 
-📘 3. Derivatives in Kinematics
+# 📘 3. Derivatives in Kinematics
 
 Students must learn:
 
-𝑣
-(
-𝑡
-)
-=
-𝑑
-𝑥
-𝑑
-𝑡
-v(t)=
-dt
-dx
-	​
+\[
+v(t) = \frac{dx}{dt}
+\]
 
-𝑎
-(
-𝑡
-)
-=
-𝑑
-𝑣
-𝑑
-𝑡
-a(t)=
-dt
-dv
-	​
+\[
+a(t) = \frac{dv}{dt}
+\]
 
-Example 1 — Derivative Practice
+### Example 1 — Derivative Practice
 
 Let:
 
-𝑥
-(
-𝑡
-)
-=
-5
-𝑡
-2
-−
-3
-𝑡
-+
-8
-x(t)=5t
-2
-−3t+8
+\[
+x(t) = 5t^2 - 3t + 8
+\]
 
 Then:
 
-𝑣
-(
-𝑡
-)
-=
-10
-𝑡
-−
-3
-v(t)=10t−3
-𝑎
-(
-𝑡
-)
-=
-10
-a(t)=10
+\[
+v(t) = 10t - 3
+\]
+
+\[
+a(t) = 10
+\]
 
 Interpretation:
 
-Constant positive acceleration
+- Constant positive acceleration  
+- Linear velocity  
+- Quadratic position  
 
-Linear velocity
+---
 
-Quadratic position
-
-📘 4. Integration in Kinematics
+# 📘 4. Integration in Kinematics
 
 If acceleration is known:
 
-𝑣
-(
-𝑡
-)
-=
-∫
-𝑎
-(
-𝑡
-)
- 
-𝑑
-𝑡
-v(t)=∫a(t)dt
+\[
+v(t) = \int a(t)\,dt
+\]
 
 If velocity is known:
 
-𝑥
-(
-𝑡
-)
-=
-∫
-𝑣
-(
-𝑡
-)
- 
-𝑑
-𝑡
-x(t)=∫v(t)dt
-4.1 Constant Acceleration
+\[
+x(t) = \int v(t)\,dt
+\]
 
-When 
-𝑎
-a is constant:
+---
 
-𝑣
-(
-𝑡
-)
-=
-𝑣
-0
-+
-𝑎
-𝑡
-v(t)=v
-0
-	​
+## 4.1 Constant Acceleration
 
-+at
-𝑥
-(
-𝑡
-)
-=
-𝑥
-0
-+
-𝑣
-0
-𝑡
-+
-1
-2
-𝑎
-𝑡
-2
-x(t)=x
-0
-	​
+When \(a\) is constant:
 
-+v
-0
-	​
+\[
+v(t) = v_0 + at
+\]
 
-t+
-2
-1
-	​
-
-at
-2
+\[
+x(t)=x_0 + v_0 t + \frac{1}{2}at^2
+\]
 
 These are the standard kinematics equations.
 
-4.2 Non-Constant Acceleration Example
-𝑎
-(
-𝑡
-)
-=
-4
-𝑡
+---
+
+## 4.2 Non-Constant Acceleration Example
+
+\[
 a(t)=4t
+\]
 
 Then:
 
-𝑣
-(
-𝑡
-)
-=
-∫
-4
-𝑡
- 
-𝑑
-𝑡
-=
-2
-𝑡
-2
-+
-𝐶
-v(t)=∫4tdt=2t
-2
-+C
+\[
+v(t) = \int 4t\,dt = 2t^2 + C
+\]
 
-Use initial conditions to find 
-𝐶
-C.
+Use initial conditions to find \(C\).
 
-4.3 Free-Fall Motion
+---
+
+## 4.3 Free-Fall Motion
 
 Take downward as positive:
 
-𝑎
-=
-𝑔
-=
-9.8
- 
-m/s
-2
-a=g=9.8 m/s
-2
+\[
+a=g=9.8\ \text{m/s}^2
+\]
 
 Velocity:
 
-𝑣
-(
-𝑡
-)
-=
-𝑔
-𝑡
-+
-𝑣
-0
-v(t)=gt+v
-0
-	​
-
+\[
+v(t)=gt + v_0
+\]
 
 Position:
 
-𝑥
-(
-𝑡
-)
-=
-𝑥
-0
-+
-𝑣
-0
-𝑡
-+
-1
-2
-𝑔
-𝑡
-2
-x(t)=x
-0
-	​
+\[
+x(t)=x_0 + v_0 t + \frac{1}{2}gt^2
+\]
 
-+v
-0
-	​
+If dropped:  
+- \(v_0 = 0\)  
+- \(x_0\) = starting height  
 
-t+
-2
-1
-	​
+---
 
-gt
-2
+# 📘 5. Graph Interpretation (Critical for Test 1)
 
-If dropped:
+### Position → Velocity  
+Velocity is the **slope** of the position graph.
 
-𝑣
-0
-=
-0
-v
-0
-	​
+### Velocity → Acceleration  
+Acceleration is the **slope** of the velocity graph.
 
-=0
+### Velocity → Displacement  
+Displacement equals the **area under the velocity curve**.
 
-𝑥
-0
-x
-0
-	​
+---
 
- = starting height
+# 📘 6. Worked Examples
 
-📘 5. Graph Interpretation (Critical for Test 1)
-Position → Velocity
+### Example 1 — From \(x(t)\) to \(v(t)\) and \(a(t)\)
 
-Velocity is the slope of the position graph.
+\[
+x(t)=4t^3 - 2t
+\]
 
-Velocity → Acceleration
+\[
+v(t)=12t^2 - 2
+\]
 
-Acceleration is the slope of the velocity graph.
-
-Velocity → Displacement
-
-Displacement equals the area under the velocity curve.
-
-📘 6. Worked Examples
-Example 1 — From 
-𝑥
-(
-𝑡
-)
-x(t) to 
-𝑣
-(
-𝑡
-)
-v(t) and 
-𝑎
-(
-𝑡
-)
-a(t)
-𝑥
-(
-𝑡
-)
-=
-4
-𝑡
-3
-−
-2
-𝑡
-x(t)=4t
-3
-−2t
-𝑣
-(
-𝑡
-)
-=
-12
-𝑡
-2
-−
-2
-v(t)=12t
-2
-−2
-𝑎
-(
-𝑡
-)
-=
-24
-𝑡
+\[
 a(t)=24t
-Example 2 — Dropped Object
+\]
+
+---
+
+### Example 2 — Dropped Object
 
 A ball is dropped from rest at a height of 20 m.
 
-Velocity after 2 seconds:
+**Velocity after 2 seconds:**
 
-𝑣
-=
-𝑔
-𝑡
-=
-9.8
-(
-2
-)
-=
-19.6
- m/s
-v=gt=9.8(2)=19.6 m/s
+\[
+v = gt = 9.8(2)=19.6\ \text{m/s}
+\]
 
-Position after 2 seconds:
+**Position after 2 seconds:**
 
-𝑥
-=
-20
-−
-1
-2
-(
-9.8
-)
-(
-2
-2
-)
-=
-20
-−
-19.6
-=
-0.4
- m
-x=20−
-2
-1
-	​
+\[
+x = 20 - \frac{1}{2}(9.8)(2^2)=20 - 19.6 = 0.4\ \text{m}
+\]
 
-(9.8)(2
-2
-)=20−19.6=0.4 m
-Example 3 — Non-Constant Acceleration
-𝑎
-(
-𝑡
-)
-=
-6
-𝑡
-,
-𝑣
-(
-0
-)
-=
-3
-a(t)=6t,v(0)=3
+---
+
+### Example 3 — Non-Constant Acceleration
+
+\[
+a(t)=6t,\quad v(0)=3
+\]
 
 Velocity:
 
-𝑣
-(
-𝑡
-)
-=
-∫
-6
-𝑡
- 
-𝑑
-𝑡
-=
-3
-𝑡
-2
-+
-3
-v(t)=∫6tdt=3t
-2
-+3
+\[
+v(t)=3t^2 + 3
+\]
 
 Position:
 
-𝑥
-(
-𝑡
-)
-=
-∫
-(
-3
-𝑡
-2
-+
-3
-)
- 
-𝑑
-𝑡
-=
-𝑡
-3
-+
-3
-𝑡
-x(t)=∫(3t
-2
-+3)dt=t
-3
-+3t
-📘 7. Practice Problems
+\[
+x(t)=t^3 + 3t
+\]
 
-Given
+---
 
-𝑥
-(
-𝑡
-)
-=
-2
-𝑡
-3
-−
-5
-𝑡
-2
-+
-7
-x(t)=2t
-3
-−5t
-2
-+7
+# 📘 7. Practice Problems
 
-find 
-𝑣
-(
-𝑡
-)
-v(t) and 
-𝑎
-(
-𝑡
-)
-a(t).
+1. Given  
+   \[
+   x(t)=2t^3 - 5t^2 + 7
+   \]  
+   find \(v(t)\) and \(a(t)\).
 
-A car starts from rest and accelerates at 4 m/s² for 5 seconds.
-Find the distance traveled.
+2. A car starts from rest and accelerates at 4 m/s² for 5 seconds.  
+   Find the distance traveled.
 
-A ball is thrown upward at 12 m/s.
-Find the maximum height.
+3. A ball is thrown upward at 12 m/s.  
+   Find the maximum height.
 
-Convert 45 mph to m/s.
+4. Convert 45 mph to m/s.
 
-If 
-𝑣
-(
-𝑡
-)
-=
-6
-𝑡
-v(t)=6t and 
-𝑥
-(
-0
-)
-=
-0
-x(0)=0, find 
-𝑥
-(
-𝑡
-)
-x(t).
+5. If \(v(t)=6t\) and \(x(0)=0\), find \(x(t)\).
 
-📘 8. Mini-Quiz (Self-Check)
+---
 
-If velocity is the derivative of position, what is acceleration?
-✔ Derivative of velocity
+# 📘 8. Mini-Quiz (Self-Check)
 
-True or False: acceleration can change even when velocity is zero.
-✔ True
+1. If velocity is the derivative of position, what is acceleration?  
+   ✔ Derivative of velocity  
 
-A ball dropped has initial velocity:
-✔ 0 m/s
+2. True or False: acceleration can change even when velocity is zero.  
+   ✔ True  
 
-If 
-𝑎
-(
-𝑡
-)
-=
-10
-a(t)=10, what kind of function is 
-𝑣
-(
-𝑡
-)
-v(t)?
-✔ Linear
+3. A ball dropped has initial velocity:  
+   ✔ 0 m/s  
 
-📘 9. Summary Sheet (What You Must Know for Test 1)
-Must-Know Formulas:
-𝑣
-(
-𝑡
-)
-=
-𝑑
-𝑥
-𝑑
-𝑡
-v(t)=
-dt
-dx
-	​
+4. If \(a(t)=10\), what kind of function is \(v(t)\)?  
+   ✔ Linear  
 
-𝑎
-(
-𝑡
-)
-=
-𝑑
-𝑣
-𝑑
-𝑡
-a(t)=
-dt
-dv
-	​
+---
 
-𝑣
-(
-𝑡
-)
-=
-𝑣
-0
-+
-𝑎
-𝑡
-v(t)=v
-0
-	​
+# 📘 9. Summary Sheet (What You Must Know for Test 1)
 
-+at
-𝑥
-(
-𝑡
-)
-=
-𝑥
-0
-+
-𝑣
-0
-𝑡
-+
-1
-2
-𝑎
-𝑡
-2
-x(t)=x
-0
-	​
+### Must-Know Formulas:
 
-+v
-0
-	​
+\[
+v(t) = \frac{dx}{dt}
+\]
 
-t+
-2
-1
-	​
+\[
+a(t) = \frac{dv}{dt}
+\]
 
-at
-2
-Must-Know Concepts:
+\[
+v(t)=v_0 + at
+\]
 
-Slope interpretation (graphs)
+\[
+x(t)=x_0 + v_0 t + \frac{1}{2}at^2
+\]
 
-Area under velocity curve
+### Must-Know Concepts:
 
-Free-fall modeling
+- Slope interpretation (graphs)  
+- Area under velocity curve  
+- Free-fall modeling  
+- Unit conversions  
+- Dimensional analysis  
 
-Unit conversions
+---
 
-Dimensional analysis
+# 🎉 Week 1 Complete!
 
-🎉 Week 1 Complete!
