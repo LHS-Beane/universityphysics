@@ -1,13 +1,16 @@
 site_name: Physics 201
-site_url: https://your-username.github.io/universityphysics/
+# Replace with your actual username below
+site_url: https://lhs-beane.github.io/universityphysics/
 
 theme:
   name: material
 
+# This section tells the site to look for $$ signs
 markdown_extensions:
-  - admonition
+  - pymdownx.arithmatex:
+      generic: true
 
-# We are using the Cloud version of MathJax. 
-# This does NOT require any local javascript files.
+# This section loads the math engine from the web
 extra_javascript:
-  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
